@@ -15,10 +15,24 @@ export interface Room {
     hotel: Hotel;
     roomType: string;
     pricePerNight: number;
-    amenities: string[];
+    amenities: Amenity[];
     images: string[];
     isAvailable: boolean;
     createdAt: string;  // or Date if you're parsing it
     updatedAt: string;  // or Date
     __v: number;
 }
+export type Amenity = "Free WiFi" | "Free Breakfast" | "Room Service" | "Mountain View" | "Pool Access";
+
+
+export interface CheckboxProps {
+    label: string;
+    selected?: boolean;
+    onChange?: (checked?: boolean, label?: string) => void;
+}
+
+export interface RadioButtonProps {
+    label: string;
+    selected?: boolean;
+    onChange?: (label: string) => void;
+  }

@@ -1,6 +1,6 @@
 import { assets } from "../assets/assets";
 
-const StarRating = ({ rating = 4 }: { rating: number }) => {
+const StarRating = ({ rating = 4 }: { rating?: number }) => {
     return (
         <>
             {Array(5)
