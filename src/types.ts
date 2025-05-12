@@ -1,27 +1,44 @@
-
 export interface HotelCardProps {
     room: Room;
     index: number;
 }
 
-interface Hotel {
+export type Owner = {
+    _id: string;
+    username: string;
+    email: string;
+    image: string;
+    role: string;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+    recentSearchedCities: string[];
+};
+
+export type Hotel = {
+    _id: string;
     name: string;
     address: string;
+    contact: string;
+    owner: Owner;
     city: string;
-    country?: string;
-}
-export interface Room {
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+};
+
+export type Room = {
     _id: string;
     hotel: Hotel;
     roomType: string;
     pricePerNight: number;
-    amenities: Amenity[];
+    amenities: string[];
     images: string[];
     isAvailable: boolean;
-    createdAt: string;  // or Date if you're parsing it
-    updatedAt: string;  // or Date
+    createdAt: string;
+    updatedAt: string;
     __v: number;
-}
+};
 export type Amenity = "Free WiFi" | "Free Breakfast" | "Room Service" | "Mountain View" | "Pool Access";
 
 
@@ -35,4 +52,4 @@ export interface RadioButtonProps {
     label: string;
     selected?: boolean;
     onChange?: (label: string) => void;
-  }
+}
