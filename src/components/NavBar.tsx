@@ -117,8 +117,8 @@ const Navbar = () => {
           </UserButton>
         ) : (
           <button
-            onClick={() => openSignIn}
-            className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500"
+            onClick={() => openSignIn()}
+            className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500 cursor-pointer"
           >
             Login
           </button>
@@ -177,7 +177,7 @@ const Navbar = () => {
         )}
         {!user && (
           <button
-            onClick={() => openSignIn}
+            onClick={() => openSignIn()}
             className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500"
           >
             Login
